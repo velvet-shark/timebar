@@ -2,7 +2,7 @@
 
 A quiet timer for your Mac's menu bar. Start a timer and a thin line appears below the menu bar. Its right edge moves left as time runs out. Glance up to see how much time remains.
 
-![Timebar in action: a thin blue line beneath the macOS menu bar shows roughly two-thirds of the timer remaining](docs/images/timebar-in-action.png)
+![Timebar in action: a thin blue line beneath the macOS menu bar shows roughly two-thirds of the timer remaining](docs/images/timebar-in-action-transparent.png)
 
 Desktop mockup: about 17 minutes left in a 25-minute timer. The blue line shrinks from right to left as time runs out.
 
