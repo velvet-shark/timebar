@@ -2,14 +2,11 @@
 
 A quiet timer for your Mac's menu bar. Start a timer and a thin line appears below the menu bar. Its right edge moves left as time runs out. Glance up to see how much time remains.
 
+![Timebar in action: a thin blue line beneath the macOS menu bar shows roughly two-thirds of the timer remaining](docs/images/timebar-in-action.png)
+
+Desktop mockup: about 17 minutes left in a 25-minute timer. The blue line shrinks from right to left as time runs out.
+
 Native Swift. No accounts, analytics, network requests, or third-party dependencies.
-
-<p>
-  <img src="docs/images/timer.jpg" alt="Timebar timer controls showing the remaining time, progress, presets, and custom duration fields" width="360">
-  <img src="docs/images/appearance.jpg" alt="Timebar appearance settings with the blue Subtle preset, 1 pt thickness, and 65% opacity" width="360">
-</p>
-
-Timer controls and appearance settings from the current source build.
 
 ## Download
 
@@ -32,6 +29,13 @@ Updates are manual: quit Timebar, download the new version, and replace the app 
 - Open the menu to see the remaining time and percentage. Pause, resume, stop, or restart from there.
 - Starting another timer replaces the current one. A paused timer leaves the line at its current width.
 - At zero, the line disappears and the menu icon becomes a checkmark. An optional quiet sound marks completion.
+
+<p>
+  <img src="docs/images/timer.jpg" alt="Timebar timer controls showing the remaining time, progress, presets, and custom duration fields" width="360">
+  <img src="docs/images/appearance.jpg" alt="Timebar appearance settings with the blue Subtle preset, 1 pt thickness, and 65% opacity" width="360">
+</p>
+
+Timer controls and appearance settings from the current source build.
 
 ## Make it yours
 
