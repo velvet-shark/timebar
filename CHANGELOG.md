@@ -1,5 +1,10 @@
 # Changelog
 
+## Unreleased
+
+- Reduce the default line thickness and the Subtle preset to 1 point, keeping blue at 65% opacity.
+- Add screenshots of the timer and appearance controls to the README.
+
 ## 1.0.0 - 2026-09-22
 
 First public release.

@@ -4,6 +4,13 @@ A quiet timer for your Mac's menu bar. Start a timer and a thin line appears bel
 
 Native Swift. No accounts, analytics, network requests, or third-party dependencies.
 
+<p>
+  <img src="docs/images/timer.png" alt="Timebar timer controls showing the remaining time, progress, presets, and custom duration fields" width="360">
+  <img src="docs/images/appearance.png" alt="Timebar appearance settings with the blue Subtle preset, 1 pt thickness, and 65% opacity" width="360">
+</p>
+
+Timer controls and appearance settings from the current source build.
+
 ## Download
 
 **[Download Timebar 1.0](https://github.com/velvet-shark/timebar/releases/latest)**
@@ -28,7 +35,7 @@ Updates are manual: quit Timebar, download the new version, and replace the app 
 
 ## Make it yours
 
-Choose a preset appearance or adjust the line yourself:
+The current source defaults to Subtle: blue, 1 point thick, at 65% opacity. The v1.0 download still uses the earlier 2-point default. Choose a preset appearance or adjust the line yourself:
 
 | Setting | Options |
 | --- | --- |

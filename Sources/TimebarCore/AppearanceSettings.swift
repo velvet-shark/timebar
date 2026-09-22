@@ -44,7 +44,7 @@ public struct AppearanceSettings: Codable, Equatable, Sendable {
     }
 
     public var color: BarColor = .blue
-    public var thickness: Double = 2
+    public var thickness: Double = 1
     public var opacity: Double = 0.65
     public var showTrack = false
     public var displays: Displays = .all
@@ -56,7 +56,7 @@ public struct AppearanceSettings: Codable, Equatable, Sendable {
 
     public mutating func apply(_ preset: Preset) {
         switch preset {
-        case .subtle: color = .blue; thickness = 2; opacity = 0.65
+        case .subtle: color = .blue; thickness = 1; opacity = 0.65
         case .focus: color = .mint; thickness = 3; opacity = 0.85
         case .warm: color = .amber; thickness = 2; opacity = 0.75
         }
