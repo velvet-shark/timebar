@@ -5,8 +5,8 @@ A quiet timer for your Mac's menu bar. Start a timer and a thin line appears bel
 Native Swift. No accounts, analytics, network requests, or third-party dependencies.
 
 <p>
-  <img src="docs/images/timer.png" alt="Timebar timer controls showing the remaining time, progress, presets, and custom duration fields" width="360">
-  <img src="docs/images/appearance.png" alt="Timebar appearance settings with the blue Subtle preset, 1 pt thickness, and 65% opacity" width="360">
+  <img src="docs/images/timer.jpg" alt="Timebar timer controls showing the remaining time, progress, presets, and custom duration fields" width="360">
+  <img src="docs/images/appearance.jpg" alt="Timebar appearance settings with the blue Subtle preset, 1 pt thickness, and 65% opacity" width="360">
 </p>
 
 Timer controls and appearance settings from the current source build.
