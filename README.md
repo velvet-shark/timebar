@@ -4,8 +4,6 @@ A quiet timer for your Mac's menu bar. Start a timer and a thin line appears bel
 
 ![Timebar in action: a thin blue line beneath the macOS menu bar shows roughly two-thirds of the timer remaining](docs/images/timebar-in-action-transparent.png)
 
-Desktop mockup: about 17 minutes left in a 25-minute timer. The blue line shrinks from right to left as time runs out.
-
 Native Swift. No accounts, analytics, network requests, or third-party dependencies.
 
 ## Download
@@ -18,7 +16,7 @@ Requires **macOS 14 Sonoma or later**, including macOS 26 Tahoe. The universal d
 2. Drag **Timebar** onto the **Applications** shortcut in the disk image.
 3. Open **Timebar** from Applications, then click its timer icon in the menu bar. There is no Dock icon.
 
-**Timebar is Developer ID signed and notarized by Apple.** macOS may ask you to confirm that you want to open the downloaded app on its first launch. You can eject the disk image after installation. A ZIP alternative and SHA-256 checksums are available on the [release page](https://github.com/velvet-shark/timebar/releases/tag/v1.0.1).
+**Timebar is Developer ID signed and notarized by Apple.** macOS may ask you to confirm that you want to open the downloaded app on its first launch. You can eject the disk image after installation.
 
 To update, quit Timebar, download the latest DMG, and replace the app in Applications. Your preferences and timer remain saved.
 
@@ -79,14 +77,13 @@ swift test
 ./scripts/run.sh
 ```
 
-Build and package both Mac architectures:
+Build both Mac architectures:
 
 ```sh
 ./scripts/build-app.sh --universal
-./scripts/package-release.sh
 ```
 
-The app and ZIP are written to `dist/`. Builds use a local ad hoc signature by default. See [Distribution](docs/DISTRIBUTION.md) for the Developer ID signing and notarization workflow.
+The app is written to `dist/Timebar.app`. Builds use a local ad hoc signature by default. See [Distribution](docs/DISTRIBUTION.md) for the Developer ID signing, notarization, and DMG release workflow.
 
 `TimebarCore` contains deterministic timer state, refresh scheduling, duration validation, appearance settings, and display geometry. `Timebar` contains the SwiftUI menu and AppKit status item and overlay. Timer arithmetic is separate from real clocks and UI, so it can be tested without sleeping or driving the desktop.
 

@@ -2,8 +2,8 @@
 
 ## 1.0.1 - 2026-09-22
 
-- Ship a Developer ID signed and Apple-notarized DMG with drag-to-Applications installation, plus a notarized ZIP alternative.
-- Include stapled notarization tickets and SHA-256 checksums for the downloads.
+- Ship a Developer ID signed and Apple-notarized DMG with drag-to-Applications installation.
+- Include stapled notarization tickets in the app and DMG.
 - Update the installation instructions and add a DMG packaging script and signing workflow.
 - Reduce the default line thickness and the Subtle preset to 1 point, keeping blue at 65% opacity.
 - Add screenshots of the timer and appearance controls to the README.
