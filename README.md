@@ -10,17 +10,17 @@ Native Swift. No accounts, analytics, network requests, or third-party dependenc
 
 ## Download
 
-**[Download Timebar 1.0](https://github.com/velvet-shark/timebar/releases/latest)**
+**[Download Timebar 1.0.1 for macOS](https://github.com/velvet-shark/timebar/releases/download/v1.0.1/Timebar-1.0.1-macOS-universal.dmg)**
 
 Requires **macOS 14 Sonoma or later**, including macOS 26 Tahoe. The universal download includes Apple silicon and Intel binaries. Interactive testing has been performed on Apple silicon; see [verification](VERIFICATION.md) for coverage.
 
-1. Download the `Timebar-1.0.0-macOS-universal.zip` release asset and unzip it.
-2. Drag `Timebar.app` to Applications and open it.
-3. Click the timer icon in the menu bar. There is no Dock icon.
+1. Download and open `Timebar-1.0.1-macOS-universal.dmg`.
+2. Drag **Timebar** onto the **Applications** shortcut in the disk image.
+3. Open **Timebar** from Applications, then click its timer icon in the menu bar. There is no Dock icon.
 
-**The 1.0 download is ad hoc signed and has not been notarized by Apple.** macOS may block the first launch. If you trust this download, Apple's [instructions for opening an unnotarized app](https://support.apple.com/102445) explain the app-specific **Open Anyway** option in System Settings > Privacy & Security. A SHA-256 checksum accompanies the release. You can also build from source below. Developer ID signing and notarization are planned for a later release.
+**Timebar is Developer ID signed and notarized by Apple.** macOS may ask you to confirm that you want to open the downloaded app on its first launch. You can eject the disk image after installation. A ZIP alternative and SHA-256 checksums are available on the [release page](https://github.com/velvet-shark/timebar/releases/tag/v1.0.1).
 
-Updates are manual: quit Timebar, download the new version, and replace the app in Applications. Your preferences and timer remain saved.
+To update, quit Timebar, download the latest DMG, and replace the app in Applications. Your preferences and timer remain saved.
 
 ## Use
 
@@ -39,7 +39,7 @@ Timer controls and appearance settings from the current source build.
 
 ## Make it yours
 
-The current source defaults to Subtle: blue, 1 point thick, at 65% opacity. The v1.0 download still uses the earlier 2-point default. Choose a preset appearance or adjust the line yourself:
+Timebar defaults to Subtle: blue, 1 point thick, at 65% opacity. Choose a preset appearance or adjust the line yourself:
 
 | Setting | Options |
 | --- | --- |
