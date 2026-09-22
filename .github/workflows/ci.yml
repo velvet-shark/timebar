@@ -1,0 +1,27 @@
+name: Build and test
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  macos:
+    runs-on: macos-15
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
+      - name: Test
+        run: swift test
+      - name: Build universal app
+        run: ./scripts/build-app.sh --universal
+      - name: Package download
+        run: ./scripts/package-release.sh
+      - uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4
+        with:
+          name: Timebar-macOS
+          path: |
+            dist/*.zip
+            dist/*.sha256
