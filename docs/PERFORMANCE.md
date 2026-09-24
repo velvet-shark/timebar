@@ -18,6 +18,23 @@ The warmed background sample used roughly 99% less CPU and 23% less physical mem
 
 The optimized process recorded a transient lifetime peak of 263.4 MiB after the first menu opening and 273.5 MiB after further interaction, compared with 379.4 MiB for the earlier process. Those peaks cover different interaction histories and are not a controlled comparison. Memory can rise temporarily when macOS loads interface resources; this change does not eliminate that peak.
 
+## Download and app size
+
+Measured from the published **v1.0.1 universal DMG** on 2026-09-24. These sizes include both `arm64` and `x86_64`, rather than a single-architecture development build.
+
+| Artifact | Bytes | Decimal MB |
+| --- | ---: | ---: |
+| Compressed DMG download | 1,734,056 | 1.73 |
+| App bundle, sum of its regular file lengths | 3,350,331 | 3.35 |
+
+The DMG is also approximately 1.65 MiB. That is the compressed download size, not installed app size or memory use. App size above counts bundle file content; actual filesystem allocation, extended attributes, and local preferences can change space used on disk. Memory measurements use MiB (1,048,576 bytes), while these download/app sizes use decimal MB (1,000,000 bytes).
+
+To reproduce, download the published DMG, mount it read-only, and sum the sizes of regular files inside `Timebar.app`, excluding symlinks. Do not include the mounted volume's free space or the Applications shortcut. The verified DMG SHA-256 is `ad1e433ef8d3d2487629d880d8650f1e7a88f100913a55152a433d84d4b072f0`.
+
+## Battery evidence
+
+The recorded background CPU use was low, and the app avoids polling while idle or paused. These are implementation and process measurements, not a measured battery-life result. No wattage, Energy Impact score, battery percentage per hour, or all-day battery guarantee has been established. A controlled MacBook comparison over longer sessions is still needed to quantify battery impact.
+
 ## What changed
 
 - The SwiftUI menu is created on demand and released after closing. Only lightweight input and tab state remain.

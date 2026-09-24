@@ -10,6 +10,8 @@ Native Swift. No accounts, analytics, network requests, or third-party dependenc
 
 **[Download Timebar 1.0.1 for macOS](https://github.com/velvet-shark/timebar/releases/download/v1.0.1/Timebar-1.0.1-macOS-universal.dmg)**
 
+**1.73 MB download · 3.35 MB of app-bundle files**, including both Mac architectures. Filesystem space used after installation can differ.
+
 Requires **macOS 14 Sonoma or later**, including macOS 26 Tahoe. The universal download includes Apple silicon and Intel binaries. Interactive testing has been performed on Apple silicon; see [verification](VERIFICATION.md) for coverage.
 
 1. Download and open `Timebar-1.0.1-macOS-universal.dmg`.
@@ -54,9 +56,19 @@ With an auto-hidden menu bar, the default line stays below the normal menu area.
 
 ## Small by design
 
+For an app left running in the menu bar, background resource use matters. Here are the recorded release-build measurements on an Apple silicon desktop running macOS 27.0:
+
+| Timer state | Average CPU, one core | Physical memory footprint |
+| --- | ---: | ---: |
+| Running, menu closed, before first menu opening | 0.067% | 13.2 MiB |
+| Running, after opening and closing the menu | 0.033% | 35.3 MiB |
+| Timer menu visible | 1.332% | 37.4 MiB |
+
+The background samples lasted 30 seconds each; the open-menu sample lasted 15 seconds, using a 1-hour-45-minute timer. These are measurements from 2026-09-22, not fixed limits. Opening the interface also produced transient lifetime memory peaks up to 273.5 MiB in that run; the low startup figure is not the app's permanent footprint.
+
 Timebar schedules updates around visible changes to the line, instead of continuously redrawing the interface. It creates the menu interface when opened and releases it when closed, while preserving your custom duration input. Idle and paused timers have no scheduled ticks. Sleeping displays keep only the completion callback.
 
-Measurements, the profiling command, and testing limits are documented in [Performance](docs/PERFORMANCE.md). CPU and memory depend on the display, timer duration, visible controls, and macOS version; these measurements are not a battery-life guarantee.
+**Battery life has not been measured on a laptop.** Low background CPU and fewer scheduled updates are useful efficiency evidence, but they do not establish a battery-drain figure. Short timers, display setup, visible controls, and macOS version affect resource use. See [Performance](docs/PERFORMANCE.md) for all results, size measurements, and the profiling command.
 
 ## Timer behavior and privacy
 
